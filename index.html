@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings">
+            <label>Рівень складності:</label>
+            <label><input type="radio" name="difficulty" value="beginner"> Початковий</label>
+            <label><input type="radio" name="difficulty" value="intermediate"> Середній</label>
+            <label><input type="radio" name="difficulty" value="advanced"> Високий</label>
+        </div>
+
+        <div class="game">
+            <div class="word" id="word"></div>
+            <div class="input-box">
+                <input type="text" id="translation" placeholder="Введіть переклад"></br>
+                </br><button id="check-btn">Перевірити</button>
+            </div>
+            <div class="stats">
+                <p>Крок: <span id="step">1</span>/10</p>
+                <p>Вірно: <span id="correct">0</span></p>
+                <p>Невірно: <span id="incorrect">0</span></p>
+            </div>
+        </div>
+
+        <div class="modal" id="result-modal">
+            <div class="modal-content">
+                <h2>Результат</h2>
+                <p id="result-message"></p>
+                <button id="restart-btn">Почати знову</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab10.js"></script>
+</body>
+</html>
